@@ -292,7 +292,13 @@ disable =
 	C0114,
 	C0115,
 	C0116,
-	C0411
+	C0411,
+	super-method-not-called,  # E7601: Super method not called
+    useless-suppression,      # I0021: Useless suppression of ...
+    line-too-long,            # C0301: Line too long
+    wildcard-import,          # W0401: Wildcard import
+    raise-missing-from,       # W0707: Consider explicitly re-raising ...
+    use-dict-literal          # R1735: Consider using a dict literal ...
 
 [REPORTS]
 output-format = text
