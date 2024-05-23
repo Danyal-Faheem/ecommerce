@@ -19,8 +19,15 @@ RUN apt update && \
   libmysqlclient-dev \
   pkg-config \
   libssl-dev \
-  libcairo2-dev && \
+  libcairo2-dev \
+  wget && \
   rm -rf /var/lib/apt/lists/*
+
+# Install geckodriver
+RUN wget -q https://github.com/mozilla/geckodriver/releases/download/v0.32.2/geckodriver-v0.32.2-linux64.tar.gz && \
+    tar -xzf geckodriver-v0.32.2-linux64.tar.gz && \
+    mv geckodriver /usr/local/bin/ && \
+    rm geckodriver-v0.32.2-linux64.tar.gz
 
 # Use UTF-8.
 RUN locale-gen en_US.UTF-8
