@@ -287,6 +287,12 @@ disable =
 	illegal-waffle-usage,
 	
 	logging-fstring-interpolation,
+	R1725,
+	W1406,
+	C0114,
+	C0115,
+	C0116,
+	C0411
 
 [REPORTS]
 output-format = text
