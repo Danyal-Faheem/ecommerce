@@ -48,11 +48,11 @@ billiard==4.2.0
     # via celery
 bleach==6.1.0
     # via -r requirements/base.in
-boto3==1.34.110
+boto3==1.34.111
     # via
     #   -r requirements/base.in
     #   django-ses
-botocore==1.34.110
+botocore==1.34.111
     # via
     #   boto3
     #   s3transfer
@@ -245,7 +245,7 @@ edx-django-release-util==1.4.0
     # via -r requirements/base.in
 edx-django-sites-extensions==4.2.0
     # via -r requirements/base.in
-edx-django-utils==5.14.0
+edx-django-utils==5.14.1
     # via
     #   -r requirements/base.in
     #   django-config-models

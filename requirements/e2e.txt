@@ -43,7 +43,7 @@ django-waffle==4.1.0
     # via
     #   -c requirements/base.txt
     #   edx-django-utils
-edx-django-utils==5.14.0
+edx-django-utils==5.14.1
     # via
     #   -c requirements/base.txt
     #   edx-rest-api-client

@@ -12,3 +12,4 @@ ptvsd
 
 # For devserver code reloading
 pywatchman
+astroid==2.15.8

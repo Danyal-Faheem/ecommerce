@@ -48,6 +48,7 @@ needle==0.5.0
 requests==2.32.2
 
 pylint==2.17.7
+astroid==2.15.8
 
 # backports-zoneinfo comes by-default in newer versions of python
 # it gives error while building wheel with python>=3.9
