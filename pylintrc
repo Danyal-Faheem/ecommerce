@@ -323,7 +323,7 @@ notes = FIXME,XXX,TODO
 min-similarity-lines = 4
 ignore-comments = yes
 ignore-docstrings = yes
-ignore-imports = no
+ignore-imports = yes
 
 [TYPECHECK]
 ignore-mixin-members = yes
