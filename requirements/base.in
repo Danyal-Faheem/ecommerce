@@ -31,6 +31,7 @@ edx-django-utils
 edx-drf-extensions>=8.13.0  # 8.13 fixes forgiven JWTs for ecommerce
 edx-django-sites-extensions
 edx-ecommerce-worker
+edx-lint
 edx-opaque-keys
 edx-rbac
 edx-rest-api-client
