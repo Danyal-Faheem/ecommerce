@@ -29,6 +29,11 @@ RUN wget -q https://github.com/mozilla/geckodriver/releases/download/v0.32.2/gec
     mv geckodriver /usr/local/bin/ && \
     rm geckodriver-v0.32.2-linux64.tar.gz
 
+# Install Firefox
+RUN apt-get update && \
+    apt-get install -y firefox && \
+    rm -rf /var/lib/apt/lists/*
+
 # Use UTF-8.
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
