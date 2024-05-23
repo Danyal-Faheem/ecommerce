@@ -30,7 +30,7 @@ asn1crypto==1.5.1
     # via
     #   -r requirements/base.txt
     #   cybersource-rest-client-python
-astroid==2.12.12
+astroid==3.2.2
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
@@ -542,10 +542,6 @@ kombu==5.3.7
     # via
     #   -r requirements/base.txt
     #   celery
-lazy-object-proxy==1.10.0
-    # via
-    #   -r requirements/base.txt
-    #   astroid
 libsass==0.23.0
     # via
     #   -r requirements/base.txt
@@ -767,7 +763,7 @@ pyjwt[crypto]==2.8.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.15.5
+pylint==3.2.2
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
@@ -1167,10 +1163,6 @@ wheel==0.43.0
     # via
     #   -r requirements/base.txt
     #   cybersource-rest-client-python
-wrapt==1.16.0
-    # via
-    #   -r requirements/base.txt
-    #   astroid
 x509==0.1
     # via
     #   -r requirements/base.txt

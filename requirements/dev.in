@@ -12,5 +12,5 @@ ptvsd
 
 # For devserver code reloading
 pywatchman
-astroid==2.12.12
+astroid==3.2.2
 edx-lint

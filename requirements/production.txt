@@ -20,7 +20,7 @@ asgiref==3.8.1
     #   django-cors-headers
 asn1crypto==1.5.1
     # via cybersource-rest-client-python
-astroid==2.12.12
+astroid==3.2.2
     # via
     #   -c requirements/constraints.txt
     #   pylint
@@ -372,8 +372,6 @@ jsonschema-specifications==2023.12.1
     # via jsonschema
 kombu==5.3.7
     # via celery
-lazy-object-proxy==1.10.0
-    # via astroid
 libsass==0.23.0
     # via
     #   -r requirements/base.in
@@ -513,7 +511,7 @@ pyjwt[crypto]==2.8.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.15.5
+pylint==3.2.2
     # via
     #   -c requirements/constraints.txt
     #   edx-lint
@@ -741,8 +739,6 @@ webencodings==0.5.1
     # via bleach
 wheel==0.43.0
     # via cybersource-rest-client-python
-wrapt==1.16.0
-    # via astroid
 x509==0.1
     # via cybersource-rest-client-python
 xss-utils==0.6.0

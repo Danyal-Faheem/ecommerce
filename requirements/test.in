@@ -3,7 +3,7 @@
 -r e2e.txt                  # required for quality
 -r tox.txt
 
-astroid==2.12.12
+astroid==3.2.2
 coverage
 ddt
 diff-cover
