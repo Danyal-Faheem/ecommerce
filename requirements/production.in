@@ -4,6 +4,7 @@
 
 django-ses
 gunicorn==19.7.1
+needle
 newrelic
 python-memcached==1.59
 PyYAML

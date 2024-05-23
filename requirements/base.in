@@ -46,6 +46,7 @@ markdown==3.4.3
 mysqlclient
 newrelic
 ndg-httpsclient
+needle
 openedx-atlas
 path.py==7.2
 paypalrestsdk
@@ -64,3 +65,4 @@ stripe
 unicodecsv
 xss-utils
 zeep
+
