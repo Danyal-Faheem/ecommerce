@@ -30,7 +30,8 @@ class TestWAF:
     def request(self, method='GET', **kwargs):
         # Disallow redirects because otherwise we might see 401 if not logged in, etc.
         # The errors we expect to see will be immediate.
-        return requests.request(method, self.url, allow_redirects=False, **kwargs)
+        timeout = kwargs.pop('timeout', 10)  # Set default timeout to 10 seconds
+        return requests.request(method, self.url, allow_redirects=False, timeout=timeout, **kwargs)
 
     def test_sanity_check(self):
         """
