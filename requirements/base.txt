@@ -20,7 +20,7 @@ asgiref==3.8.1
     #   django-cors-headers
 asn1crypto==1.5.1
     # via cybersource-rest-client-python
-astroid==2.15.8
+astroid==2.12.12
     # via
     #   -c requirements/constraints.txt
     #   pylint
@@ -501,7 +501,7 @@ pyjwt[crypto]==2.8.0
     #   edx-drf-extensions
     #   edx-rest-api-client
     #   social-auth-core
-pylint==2.17.7
+pylint==2.15.5
     # via
     #   -c requirements/constraints.txt
     #   edx-lint
