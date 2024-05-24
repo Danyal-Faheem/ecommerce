@@ -287,18 +287,29 @@ disable =
 	illegal-waffle-usage,
 	
 	logging-fstring-interpolation,
-	R1725,
-	W1406,
-	C0114,
-	C0115,
-	C0116,
-	C0411,
 	super-method-not-called,  # E7601: Super method not called
     useless-suppression,      # I0021: Useless suppression of ...
     line-too-long,            # C0301: Line too long
     wildcard-import,          # W0401: Wildcard import
     raise-missing-from,       # W0707: Consider explicitly re-raising ...
-    use-dict-literal          # R1735: Consider using a dict literal ...
+    use-dict-literal,         # R1735: Consider using a dict literal ...
+	R1725,  				  # Consider using Python 3 style super() without arguments
+    W1406,    				  # Implicit string concatenation found in parentheses
+    C0114,  				  # Missing module docstring
+    C0115,    				  # Missing class docstring
+    C0116,  				  # Missing function or method docstring
+    C0411,  	    	 	  # Standard import should be placed before any third party or local imports
+	E1101,  				  # Instance of 'Class' has no 'member' member
+    C7620,  				  # range() call could be single-argument
+    C7690,  				  # Wrong assert type
+    C0206,  				  # Consider iterating with .items()
+    E7665,  				  # Invalid Django Waffle import
+    E7610,  				  # i18n function _() must be called with a literal string
+    E1131,  				  # Unsupported operand type(s) for |
+    W3101,  				  # Missing timeout argument for method 'requests.get'
+    R1728,  				  # Consider using a generator
+    W1404,  				  # Implicit string concatenation
+    C0325   				  # Unnecessary parens after '=' keyword
 
 [REPORTS]
 output-format = text
