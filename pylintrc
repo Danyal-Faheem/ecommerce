@@ -309,7 +309,21 @@ disable =
     W3101,  				  # Missing timeout argument for method 'requests.get'
     R1728,  				  # Consider using a generator
     W1404,  				  # Implicit string concatenation
-    C0325   				  # Unnecessary parens after '=' keyword
+    C0325,  				  # Unnecessary parens after '=' keyword
+	R1734,  				  # Consider using [] instead of list() (use-list-literal)
+    R1729,  				  # Use a generator instead 'all(...)' (use-a-generator)
+    W0134,  				  # 'return' shadowed by the 'finally' clause. (return-in-finally)
+    R1710,  				  # Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+    C7630,  				  # getattr using a literal attribute name (literal-used-as-attribute)
+    E7655,  				  # Missing non-optional annotation: '.. toggle_implementation:' (annotation-missing-token)
+    W0237,  				  # Parameter has been renamed in overriding method (arguments-renamed)
+    E0606,  				  # Possibly using variable before assignment (possibly-used-before-assignment)
+    R1711,  				  # Useless return at end of function or method (useless-return)
+    C0201,  				  # Consider iterating the dictionary directly instead of calling .keys() (consider-iterating-dictionary)
+    E7603,  				  # Test class inherits tests from another test class (test-inherits-tests)
+    R1736,  				  # Unnecessary list index lookup, use '_' instead (unnecessary-list-index-lookup)
+    W1310,  				  # Using formatting for a string that does not have any interpolated variables (format-string-without-interpolation)
+    C2801   				  # Unnecessarily calls dunder method __str__. Use str built-in function. (unnecessary-dunder-call)
 
 [REPORTS]
 output-format = text
