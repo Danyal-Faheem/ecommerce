@@ -195,7 +195,8 @@ class Command(BaseCommand):
         api_url = urljoin(f"{HUBSPOT_API_BASE_URL}/", f"{api_url}/{hubspot_object}")
         if method not in EXPECTED_METHODS:
             raise ValueError(f"Unexpected method {method}. Allowed methods are: {EXPECTED_METHODS}")
-        response = requests.request(method, api_url, json=body, params=kwargs)
+        timeout = kwargs.pop('timeout', 10)  # Set default timeout to 10 seconds
+        response = requests.request(method, api_url, json=body, timeout=timeout, params=kwargs)
         response.raise_for_status()
         return response.json()
 
