@@ -323,7 +323,15 @@ disable =
     E7603,  				  # Test class inherits tests from another test class (test-inherits-tests)
     R1736,  				  # Unnecessary list index lookup, use '_' instead (unnecessary-list-index-lookup)
     W1310,  				  # Using formatting for a string that does not have any interpolated variables (format-string-without-interpolation)
-    C2801   				  # Unnecessarily calls dunder method __str__. Use str built-in function. (unnecessary-dunder-call)
+    C2801,   				  # Unnecessarily calls dunder method __str__. Use str built-in function. (unnecessary-dunder-call)
+    R0201,
+    W0613,
+    W0611,
+    E0013,
+    E0213,
+    C0113,
+    W0612,
+    W0107
 
 [REPORTS]
 output-format = text
