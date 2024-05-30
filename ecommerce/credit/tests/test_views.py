@@ -2,7 +2,7 @@
 Tests for the checkout page.
 """
 
-
+import sys
 from datetime import timedelta
 
 import ddt
@@ -130,7 +130,21 @@ class CheckoutPageTest(DiscoveryTestMixin, TestCase, JwtMixin):
 
         response = self.client.get(self.path)
         self.assertEqual(response.status_code, 200)
-        self.assertDictContainsSubset({'course': self.course}, response.context)
+        if sys.version_info > (3, 9):
+            # Remove this pylint disable once ecommerce reaches python 3.11+
+            # pylint: disable=unsupported-binary-operation
+            # Flatten the context list into a single dictionary
+            context = {}
+            for i, ctx in enumerate(response.context):
+                if isinstance(ctx, dict):
+                    context.update(ctx)
+                elif hasattr(ctx, '__iter__') and not isinstance(ctx, str):
+                    for item in ctx:
+                        if isinstance(item, dict):
+                            context.update(item)
+            assert {'course': self.course}.items() <= context.items()
+        else:
+            self.assertDictContainsSubset({'course': self.course}, response.context)
 
         self.assertContains(
             response,
