@@ -1,5 +1,6 @@
 
 
+import sys
 import uuid
 
 import ddt
@@ -122,7 +123,11 @@ class EnterpriseUtilsTests(EnterpriseServiceMockMixin, TestCase):
             self.learner.username
         )
 
-        assert expected_return.items() <= response.items()
+        if sys.version_info > (3, 9):
+            # pylint: disable=unsupported-binary-operation
+            self.assertEqual(response, response | expected_return)  # pragma: no cover
+        else:
+            self.assertDictContainsSubset(expected_return, response)
 
     @responses.activate
     def test_ecu_needs_consent(self):

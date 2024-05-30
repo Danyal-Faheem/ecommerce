@@ -142,7 +142,8 @@ class CheckoutPageTest(DiscoveryTestMixin, TestCase, JwtMixin):
                     for item in ctx:
                         if isinstance(item, dict):
                             context.update(item)
-            assert {'course': self.course}.items() <= context.items()
+            # pylint: disable=unsupported-binary-operation
+            self.assertEqual(context, context | {'course': self.course})  # pragma: no cover
         else:
             self.assertDictContainsSubset({'course': self.course}, response.context)
 
