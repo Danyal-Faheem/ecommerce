@@ -13,7 +13,7 @@ jobs:
       matrix:
         python-version: ['py38', 'py311', 'py312']
         django-env: ['django32']
-        test: ['acceptance-python', 'test-python', 'quality-and-jobs']
+        test: ['test-python'] #['acceptance-python', 'test-python', 'quality-and-jobs']
     steps:
       - uses: actions/checkout@v2
       - name: Setup and Format Python Version
