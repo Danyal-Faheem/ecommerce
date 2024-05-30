@@ -122,7 +122,7 @@ class EnterpriseUtilsTests(EnterpriseServiceMockMixin, TestCase):
             self.learner.username
         )
 
-        self.assertDictContainsSubset(expected_return, response)
+        assert expected_return.items() <= response.items()
 
     @responses.activate
     def test_ecu_needs_consent(self):

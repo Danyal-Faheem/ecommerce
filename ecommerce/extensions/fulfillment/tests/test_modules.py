@@ -212,7 +212,7 @@ class EnrollmentFulfillmentModuleTests(
             'X-Forwarded-For': self.user.tracking_context['lms_ip'],
         }
 
-        self.assertDictContainsSubset(expected_headers, actual_headers)
+        assert expected_headers.items() <= actual_headers.items()
         self.assertEqual(expected_body, actual_body)
 
     @responses.activate
@@ -377,7 +377,7 @@ class EnrollmentFulfillmentModuleTests(
             'X-Forwarded-For': self.user.tracking_context['lms_ip'],
         }
 
-        self.assertDictContainsSubset(expected_headers, actual_headers)
+        assert expected_headers.items() <= actual_headers.items()
         self.assertEqual(expected_body, actual_body)
 
     @responses.activate

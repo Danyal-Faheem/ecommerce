@@ -49,7 +49,7 @@ class CybersourceTests(CybersourceMixin, PaymentProcessorTestCaseMixin, TestCase
         expected = {
             'requestID': transaction_id,
         }
-        self.assertDictContainsSubset(expected, ppr.response)
+        assert expected.items() <= ppr.response.items()
         self.assertEqual(ppr.basket, basket)
 
         return ppr.id

@@ -177,7 +177,7 @@ class UserTests(DiscoveryTestMixin, LmsApiMockMixin, TestCase):
 
         # Verify the headers passed to the API were correct.
         expected = {'Authorization': 'JWT {}'.format(token), }
-        self.assertDictContainsSubset(expected, last_request.headers)
+        assert expected.items() <= last_request.headers.items()
 
     def test_no_user_details(self):
         """ Verify False is returned when there is a connection error. """
