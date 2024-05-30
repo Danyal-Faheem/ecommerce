@@ -3,6 +3,7 @@
 
 
 import json
+import sys
 from decimal import Decimal
 from unittest import SkipTest
 
@@ -49,7 +50,11 @@ class CybersourceTests(CybersourceMixin, PaymentProcessorTestCaseMixin, TestCase
         expected = {
             'requestID': transaction_id,
         }
-        self.assertDictContainsSubset(expected, ppr.response)
+        if sys.version_info > (3, 9):
+            # pylint: disable=unsupported-binary-operation
+            self.assertEqual(ppr.response, ppr.response | expected)  # pragma: no cover
+        else:
+            self.assertDictContainsSubset(expected, ppr.response)
         self.assertEqual(ppr.basket, basket)
 
         return ppr.id
